@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="styles.css"/>
+    <title>music</title>
+</head>
+<body class="events_body">
+    <header id="mastodon-header">
+        <nav class="main-nav">
+            <ul>
+                
+                <li style="font-size: larger;">MastodonHub</li>
+                <li><a href="../MastodonEvents/dashboard.html">Dashboard</a></li>
+                <li><a href="../MastodonEvents/Events.html">Events</a></li>
+                <li><a href="../MastodonEvents/DiscoverClubs.html">Clubs</a></li>
+            </ul>
+        </nav>
+        
+        <div class="login-signup">
+            <a href="login.html" class="button">Login</a>
+            <a href="signup.html" class="button">Sign Up</a>
+        </div>    
+    </header>
+    <div class="title">
+        <h1>Music</h1>
+    </div>
+    <section id="EventsList">
+        <table class="eventList">
+            <tr class="eventList_tr">
+                <td class="eventList_td">
+                    <div><img src="../MastodonEvents/images/music1.jpg" alt="music" width="250px" height="200px"/></div>
+                    <span class="event-date">April 15, 2024</span><br>
+                    <span class="event-category">Music</span><br>
+                    <strong>Summer Music Festival</strong><br>
+                    <p>Description: A multi-day outdoor festival featuring a diverse lineup of artists across various genres such as rock, pop, hip-hop, electronic, and indie music. Attendees camp out on-site or stay in nearby accommodations and enjoy performances on multiple stages, along with food vendors, art installations, and other activities.</p>
+                    <p>Time: 10:00 AM - 5:00 PM</p>
+                    <p>Location: XYZ</p>
+                    <button id="register-button"><a href="#">Register</a></button>
+                </td>
+                <td class="eventList_td">
+                    <div><img src="../MastodonEvents/images/music.png" alt="music" width="250px" height="200px"/></div>
+                    <span class="event-date">August 20, 2024</span><br>
+                    <span class="event-category">music</span><br>
+                    <strong>Open Mic Night</strong><br>
+                    <p>Description: A recurring event at a bar, café, or community center where aspiring musicians and performers can showcase their talents in front of a live audience. This could include solo acts, bands, comedians, poets, and other types of performers.</p>
+                    <p>Time: 2:00 PM - 4:00 PM</p>
+                    <p>Location: Community Center ABC</p>
+                    <button id="register-button"><a href="#">Register</a></button>
+                </td>
+                <td class="eventList_td">
+                    <div><img src="../MastodonEvents/images/music2.jpeg" alt="music" width="250px" height="200px"/></div>
+                    <span class="event-date">August 20, 2024</span><br>
+                    <span class="event-category">music</span><br>
+                    <strong>Charity Concert</strong><br>
+                    <p>Description: A fundraising event featuring performances by popular artists or local bands, with proceeds going to support a specific cause or charity organization. These events raise awareness and funds for important social issues while providing entertainment for attendees.</p>
+                    <p>Time: 2:00 PM - 4:00 PM</p>
+                    <p>Location: Community Center</p>
+                    <button id="register-button"><a href="#" target="_blank">Register</a></button>
+                </td>
+            </tr>
+        </table>
+    </section>
+</body>
+<footer>
+    <div class="left-column">
+        <a style="font-size: 15px;"><strong>MastodonHub</strong></a>
+        <br>
+        <a style="font-size: 10px;">Your go-to event platform.</a>
+    </div>
+    <div class="right-column">
+        <a href="../MastodonEvents/helpCenter.html" target="_blank" style="font-size: 10px;">Help Center</a>
+        <a href="../MastodonEvents/faq.html" target="_blank" style="font-size: 10px;">FAQs</a>
+        <a href="../MastodonEvents/supportTeam.html" target="_blank" style="font-size: 10px;">Support Team</a>
+        <a href="../MastodonEvents/userManual.html" target="_blank" style="font-size: 10px;">User Manual</a>
+        <a href="../MastodonEvents/contactSupport.html" target="_blank" style="font-size: 10px;">Contact Support</a>
+    </div>
+</footer>
+<script>
+    // Function to register an event
+    function registerEvent(eventId) {
+        // Here you would retrieve event details based on eventId
+        // For demonstration, let's assume event details are hard-coded
+        const eventData = {
+            name: "Sample Event",
+            category: "Sample Category",
+            date: "2024-03-15",
+            attendees: 30,
+            tickets: 50,
+            ticketType: "General"
+        };
+
+        // Add the registered event to "Your events" section
+        addEventToYourEvents(eventData);
+    }
+
+    // Function to add an event to "Your events" section
+    function addEventToYourEvents(eventData) {
+        const yourEventsTable = document.getElementById("yourEventsTable");
+        const newRow = yourEventsTable.insertRow();
+        newRow.innerHTML = `
+            <td>${eventData.name}</td>
+            <td>${eventData.category}</td>
+            <td>${eventData.date}</td>
+            <td>${eventData.attendees}</td>
+            <td>${eventData.tickets}</td>
+            <td>${eventData.ticketType}</td>
+        `;
+    }
+</script>
+</html>

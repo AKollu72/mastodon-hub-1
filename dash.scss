@@ -1,0 +1,435 @@
+/* General styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: black;
+}
+
+#mastodon-header {
+  background-color: rgba(207, 185, 145, 255);
+  color: black;
+  display: flex; /* Added display flex for better alignment */
+  justify-content: space-between; /* Added to distribute content horizontally */
+  align-items: center; /* Added to vertically align content */
+  padding: 20px;
+}
+
+.main-nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.main-nav ul li {
+  display: inline;
+  margin-right: 10px;
+}
+
+.main-nav ul li a {
+  color: black;
+  text-decoration: none;
+}
+
+.login-signup {
+  margin-left: auto; /* Pushes login/signup to the right */
+}
+
+.login-signup a {
+  background-color: black;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  padding: 10px 20px; /* Added padding for better button size */
+  margin-left: 10px;
+  transition: background-color 0.3s ease; /* Smooth transition on hover */
+}
+
+.login-signup a:hover {
+  background-color: black; /* Darker shade on hover */
+  color: white;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  width: 950px;
+  display: block; /* Ensures that image is displayed as a block element */
+  margin: 0 auto; /* Centers the image horizontally */
+  border-radius: 5px; /* Adds rounded corners to the image */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+}
+
+/* Additional CSS for overlaying text on the image */
+#header-image-container {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.header-image-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  padding: 10px 20px; /* Adjust padding as needed */
+  border-radius: 10px;
+}
+
+#clubs h2 {
+  text-align: left; /* Center-align the heading */
+  font-size: 24px; /* Adjust the font size */
+  /*font-weight: bold;*/
+  color: white; /* Text color */
+  margin-bottom: 20px; /* Add some bottom margin for spacing */
+}
+
+/* Additional CSS for styling clubs */
+
+.clubs-container {
+  padding: 10px;
+  background-color: black; /* Light gray background color */
+  border: 6px solid rgba(207, 185, 145, 255); /* Light gray border */
+  margin-top: 60px;
+}
+
+#clubs {
+  margin-bottom: 40px;
+}
+
+.clubs-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.club {
+  width: calc(30.03% - 20px); /* Adjust based on number of clubs per row */
+  margin: 10px;
+  /*border: 2px solid #ccc; /* Add border */
+  border-radius: 10px; /* Add border radius */
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add smooth transition on hover */
+  position: relative; /* Position club items relatively */
+  padding: 10px; /* Add padding */
+  box-sizing: border-box; /* Include padding in the width calculation */
+  text-align: center; /* Center-align club content */
+}
+
+.club img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease; /* Add smooth transition on hover */
+}
+
+.club:hover {
+  transform: translateY(-5px); /* Raise the club item slightly on hover */
+  box-shadow: 0 5px 15px rgba(207, 185, 145, 255); /* Add box-shadow effect on hover */
+}
+
+.club:hover img {
+  transform: scale(1.1); /* Enlarge the image on hover */
+}
+
+figcaption {
+  margin-top: 10px; /* Add some space between image and caption */
+}
+
+/* Styles for captions */
+figcaption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8); /* Add background color to caption for readability */
+  color: white;
+  padding: 10px;
+  margin: 0;
+  opacity: 0; /* Initially hide caption */
+  transition: opacity 0.3s ease; /* Add transition for smooth visibility */
+  border-radius: 6px;
+}
+
+.club:hover {
+  transform: scale(1.1); /* Scale up the club on hover */
+}
+
+/* Show caption on hover */
+.club:hover figcaption {
+  opacity: 1;
+}
+
+/* Additional CSS for styling upcoming events */
+#upcoming-events {
+  margin-top: 40px; /* Add some space above the section */
+  color: white;
+}
+
+.events-wrapper {
+  overflow: auto; /* Ensure the events wrapper can contain floated elements */
+  display: flex; /* Use flexbox for horizontal layout */
+  justify-content: space-between; /* Evenly distribute space between events */
+  flex-wrap: wrap; /* Allow events to wrap to the next row */
+}
+
+.event {
+  width: calc(20% - 20px); /* Adjust based on number of events per row */
+  margin: 10px;
+  border: 2px solid rgba(207, 185, 145, 255); /* Add border */
+  border-radius: 10px; /* Add border radius */
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add smooth transition on hover */
+  position: relative; /* Position event items relatively */
+  padding: 10px; /* Add padding */
+  box-sizing: border-box; /* Include padding in the width calculation */
+  text-align: center; /* Center-align event content */
+  display: inline-block; /* Ensure events are displayed inline */
+  vertical-align: top; /* Align events at the top of the container */
+  cursor: pointer;
+}
+
+.event:hover {
+  transform: scale(1.05); /* Scale up the event on hover */
+}
+
+.event img {
+  width: 100%; /* Ensure images fill the container */
+  height: 150px; /* Set a fixed height for the images */
+  display: block;
+  border-top-left-radius: 10px; /* Rounded corners for the image */
+  border-top-right-radius: 10px;
+  object-fit: cover; /* Ensure the image covers the entire container */
+}
+
+.event h3 {
+  margin: 10px 0; /* Add some space around the title */
+  font-size: 14px; /* Increase font size */
+  text-align: left;
+  color: white;
+}
+
+.event h3:hover{
+ 
+  transition-duration: 0.3ms ease;
+}
+
+footer {
+  background-color: rgba(207, 185, 145, 255);;
+  padding: 20px;
+  margin-top: auto;
+  height: 80px;
+  right:0;
+}
+.left-column {
+  float: left;
+}
+.right-column {
+  float: right;
+}
+
+.left-column, .right-column {
+  flex: 1;
+  text-align: left;
+
+}
+
+footer a {
+  color: black;
+  text-decoration: none;
+  display: block; /* Display each link as a block element */
+  width: 100%;
+  height: 20px;
+}
+.right-column a:hover {
+  color: white;
+}
+
+
+/* Global styles */
+#reset-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: white;
+}
+
+/* Styles for login page */
+#login-main {
+  width: 100%;
+  max-width: 400px; /* Adjust as needed */
+}
+
+#login-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+}
+
+#login-page h1 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+#login-form {
+  width: 100%;
+  max-width: 30rem;
+  margin-bottom: 2rem;
+}
+
+#login-form label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+#login-form input[type="email"],
+#login-form input[type="password"],
+#login-form button[type="submit"] { /* Apply styles to buttons */
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+#login-form button[type="submit"] {
+  width: 100%;
+  padding: 0.5rem; /* Adjust padding as needed */
+  background-color: #333;
+  color: white;
+  border: none;
+  width: 420px;
+  cursor: pointer;
+}
+
+#login-form button[type="submit"]:hover {
+  background-color: #555;
+}
+
+#login-page p {
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+#login-page p a {
+  color: #0066cc;
+  text-decoration: none;
+}
+
+#login-page p a:hover {
+  text-decoration: underline;
+}
+
+/* Styles for signup page */
+
+#styles_main {
+  width: 100%;
+  max-width: 400px; /* Adjust as needed */
+}
+
+#signup-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+}
+
+#signup-page h1 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+#signup-form {
+  width: 100%;
+  max-width: 30rem;
+  margin-bottom: 2rem;
+}
+
+#signup-form label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+#signup-form input[type="text"],
+#signup-form input[type="email"],
+#signup-form input[type="password"],
+#signup-form button[type="submit"] { /* Apply styles to buttons */
+  width: 100%;
+  padding: 0.4rem;
+  margin-bottom: 1rem;
+}
+
+#signup-form button[type="submit"] {
+  width: 100%;
+  padding: 0.5rem; /* Adjust padding as needed */
+  background-color: #333;
+  color: white;
+  border: none;
+  width: 420px;
+  cursor: pointer;
+}
+
+#signup-form button[type="submit"]:hover {
+  background-color: #555;
+}
+
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: none;
+  z-index: 1000;
+}
+
+/* Common styles */
+.popup p {
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+.popup p a {
+  color: #0066cc;
+  text-decoration: none;
+}
+
+.popup p a:hover {
+  text-decoration: underline;
+}
+
+.login-link {
+  margin-top: -20px; /* Adjust the value as needed */
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+.login-link a {
+  color: #0066cc;
+  text-decoration: none;
+}
+
+.login-link a:hover {
+  text-decoration: underline;
+}
+
+.signup-link {
+  margin-top: -20px; /* Adjust the value as needed */
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+.signup-link a {
+  color: #0066cc;
+  text-decoration: none;
+}
+
+.signup-link a:hover {
+  text-decoration: underline;
+}

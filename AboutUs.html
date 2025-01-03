@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ManstodonHub</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: black;
+            color: white; /* Set text color to white */
+        }
+        
+        #mastodon-header {
+            background-color: rgba(207, 185, 145, 255);
+            color: black;
+            display: flex;
+            justify-content: center; /* Center align content horizontally */
+            align-items: center; /* Center align content vertically */
+            padding: 30px; /* Increased padding */
+            animation: changeColor 5s infinite alternate; /* Animation */
+        }
+
+        @keyframes changeColor {
+            0% {
+                background-color: rgba(207, 185, 145, 255); /* Initial color */
+            }
+            100% {
+                background-color: gold; /* Final color */
+            }
+        }
+        
+        .main-nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .main-nav ul li {
+            display: inline;
+            margin-right: 10px;
+        }
+        
+        .main-nav ul li a {
+            color: black;
+            text-decoration: none;
+        }
+
+        .button-section {
+            text-align: center;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .button-section .left-buttons {
+            margin-right: auto;
+        }
+
+        .button-section .right-buttons {
+            margin-left: auto;
+        }
+
+        .button-section a {
+            background-color: black;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            padding: 10px 20px; /* Added padding for better button size */
+            margin: 0 5px; /* Added margin between buttons */
+            transition: background-color 0.3s ease; /* Smooth transition on hover */
+            cursor: pointer;
+        }
+
+        .button-section a:hover {
+            background-color: black; /* Darker shade on hover */
+            color: white;
+        }
+
+        .rectangle-container {
+            display: flex;
+        }
+
+        .rectangle-box {
+            width: 40%;
+            margin: 20px auto;
+            background-color: rgb(20, 3, 3);
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .rectangle-box img {
+            width: 40%;
+            height: auto;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+
+        .text-box {
+            width: 40%;
+            margin: 20px auto;
+            background-color: rgba(207, 185, 145, 255);
+            padding: 20px;
+            border-radius: 10px;
+            color: rgb(8, 1, 1); /* Set text color to white */
+            font-size: 20px; /* Increase font size */
+        }
+
+        .text-box p {
+            margin: 0; /* Remove default margin */
+        }
+
+        /* Additional styling for the small rectangle boxes */
+        .small-rectangle-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .small-rectangle-box {
+            width: 250px; /* Increased width */
+            height: 250px; /* Increased height */
+            background-color: rgba(207, 185, 145, 255);
+            margin: 10px; /* Adjust margin as needed */
+            border-radius: 20px; /* Adjust border radius */
+        }
+
+        .small-rectangle-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 20px; /* Match border radius */
+        }
+
+
+        footer {
+            background-color: rgba(207, 185, 145, 255);
+            padding: 20px;
+            margin-top: auto;
+            height: 80px;
+            right: 0;
+          }
+      
+          .left-column {
+            float: left;
+          }
+      
+          .right-column {
+            float: right;
+          }
+      
+          .left-column, .right-column {
+            flex: 1;
+            text-align: left;
+          }
+      
+          footer a {
+            color: black;
+            text-decoration: none;
+            display: block;
+            width: 100%;
+            height: 20px;
+          }
+    </style>
+</head>
+<body>
+<section class="button-section">
+    <div class="left-buttons">
+        <a href="dashboard.html" class="button">Dashboard</a>
+        <a href="DiscoverClubs.html" class="button">Clubs</a>
+        <a href="#" class="button">Events</a>
+    </div>
+    <div class="right-buttons">
+        <a href="login.html" class="button">Login</a>
+        <a href="signup.html" class="button">Sign Up</a>
+    </div>
+</section>
+
+<header id="mastodon-header">
+    <div>
+        <h1 style="font-size: larger;">MastodonHub</h1>
+    </div>
+</header>
+
+<div class="rectangle-container">
+    <div class="rectangle-box">
+        <img src="https://www.pfw.edu/sites/default/files/styles/50_50_landscape/public/images-2023/05/20200902-Lifestyle-Outdoor-JW-022.jpg?h=18e2b450&itok=iu0SFpNb" >
+        <img src="https://www.pfw.edu/sites/default/files/styles/featured/public/images-2022/02/20200201-Homecoming-Games-JW-173.jpg?itok=0iBoZONs" >
+        <img src="https://www.pfw.edu/sites/default/files/styles/50_50_landscape/public/images-2022/10/Black-student-union-T-Hardy.jpg" >
+        <img src="https://www.pfw.edu/sites/default/files/styles/featured/public/images-2022/04/indian-student-association-holi.jpg?h=1704b2fe&itok=tOd4YhKD">
+    </div>
+    <div class="text-box">
+        <p>Welcome to Mastodon Hub, your ultimate destination for discovering clubs and events at Purdue University Fort Wayne. Here, you'll find a diverse array of student-led clubs, spanning interests from sports to academic pursuits like accounting. Additionally, stay tuned for our exciting lineup of events designed to enrich your university experience and create unforgettable memories. Join us as we celebrate community, diversity, and engagement at Purdue University Fort Wayne through our vibrant club scene and dynamic event calendar.</p>
+    </div>
+</div>
+
+
+<div class="small-rectangle-container">
+    <div class="small-rectangle-box">
+        <img src="https://assets.simpleviewinc.com/simpleview/image/upload/crm/fortwayne/2022_Purdue_University_Fort_Wayne_drama_web_123A687B-5056-BF65-D6D7DEBE4ED13740-123a65685056bf6_123a6f58-5056-bf65-d6a614278f87c267.jpg" alt="Placeholder Image"> <!-- Increased placeholder size -->
+    </div>
+    <div class="small-rectangle-box">
+        <img src="https://www.pfw.edu/sites/default/files/styles/featured/public/images-2023/01/basketball-game-oakland-herd.jpg?h=70327396&itok=i6J0lMM-" alt="Placeholder Image"> <!-- Increased placeholder size -->
+    </div>
+    <div class="small-rectangle-box">
+        <img src="https://www.pfw.edu/sites/default/files/styles/50_50_landscape/public/images-2021/11/SLL-thanks-students-giving-students.jpg?h=f30cf9ee&itok=Aa_1oO2B" alt="Placeholder Image"> <!-- Increased placeholder size -->
+    </div>
+    <div class="small-rectangle-box">
+        <img src="https://assets.simpleviewinc.com/simpleview/image/fetch/c_fill,h_785,q_75,w_1175/https://assets.simpleviewinc.com/simpleview/image/upload/v1/clients/fortwayne/titans_trophy_4f15cf61-2566-49d4-9105-0b78179e12ce.png" alt="Placeholder Image"> <!-- Increased placeholder size -->
+    </div>
+</div>
+
+<footer>
+    <div class="left-column">
+        <a style="font-size: 15px;"><strong>MastodonEvents</strong></a>
+        <br>
+        <a style="font-size: 10px;">Your go-to event platform.</a>
+      </div>
+      <div class="right-column">
+        <a style="font-size: 10px;">Help Center</a>
+        <a style="font-size: 10px;">FAQs</a>
+        <a style="font-size: 10px;">Support Team</a>
+        <a style="font-size: 10px;">User Manual</a>
+        <a style="font-size: 10px;">Contact Support</a>
+      </div>
+   
+</footer>
+</body>
+</html>

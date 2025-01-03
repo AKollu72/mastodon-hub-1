@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ceramics Club</title>
+  <style>
+    body {
+      background-color: #000;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      text-align: center;
+      padding: 20px;
+      background-color: #333;
+    }
+
+    h1 {
+      margin: 0;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+    }
+
+    .officer {
+      margin-bottom: 20px;
+    }
+
+    .mail {
+      font-weight: bold;
+      color: #00f;
+    }
+
+    .previous-page-button {
+      margin-top: 20px;
+      padding: 10px;
+      background-color: #333;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Ceramics Club</h1>
+  </header>
+
+  <div class="container">
+    <div class="officer">
+      <h2>President</h2>
+      <p>Name: Alexa Ross</p>
+    </div>
+
+    <div class="officer">
+        <h2>Vice President</h2>
+        <p>Name: Rori Maul</p>
+      </div>
+
+      <div class="officer">
+        <h2>Treasurer</h2>
+        <p>Name: Anna Gottlieb</p>
+      </div>
+
+      <div class="officer">
+        <h2>Secretary</h2>
+        <p>Name: Isabel Niswander</p>
+      </div>
+  
+
+    <div class="officer">
+      <h2>Advisor</h2>
+      <p>Name:Seth Green </p>
+      <p>Email: <span class="mail">greens@pfw.edu</span></p>
+    </div>
+  </div>
+
+  <div class="officer">
+    <h2>Contact</h2>
+    <p>Email:<span class="mail">ceramicsclub@pfw.edu</span></p>
+ </div>
+
+ <!-- Previous Page Button -->
+ <button class="previous-page-button" onclick="goToPreviousPage()">Previous Page</button>
+</div>
+
+<script>
+  function goToPreviousPage() {
+    // Modify this function to navigate to the desired previous page
+    // For now, it will go back in the browser history
+    window.history.back();
+  }
+</script>
+  
+</body>
+</html>

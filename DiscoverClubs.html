@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MastodonHub - Clubs Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #000;
+      color: #fff;
+    }
+
+    header {
+      background-color: #333;
+      text-align: center;
+      padding: 10px;
+    }
+
+    header a {
+      color: #ccc;
+      text-decoration: none;
+      margin: 0 10px;
+      transition: color 0.3s ease-in-out;
+    }
+
+    header a:hover {
+      color: gold;
+    }
+
+    .club-container {
+      border: 1px solid #ddd;
+      margin: 10px;
+      padding: 10px;
+      background-color: rgb(184, 168, 77);
+      cursor: pointer;
+      transition: transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out;
+    }
+
+    .club-container:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 15px rgba(207, 119, 47, 0.8);
+    }
+
+    .club-container img {
+      width: 10%;
+      max-width: 10%;
+      height: auto;
+      max-height: 10%;
+    }
+
+    #filter-container {
+      text-align: center;
+      margin: 10px;
+    }
+
+    .filter-popup {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: #333;
+      padding: 20px;
+      z-index: 1;
+      border-radius: 5px;
+      box-shadow: 0 0 15px rgba(207, 119, 47, 0.8);
+    }
+
+    .filter-checkbox {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    footer {
+      background-color: rgba(207, 185, 145, 255);
+      padding: 20px;
+      margin-top: auto;
+      height: 80px;
+      right: 0;
+    }
+
+    .left-column {
+      float: left;
+    }
+
+    .right-column {
+      float: right;
+    }
+
+    .left-column, .right-column {
+      flex: 1;
+      text-align: left;
+    }
+    .right-column a:hover {
+      color: white;
+    }
+
+    footer a {
+      color: black;
+      text-decoration: none;
+      display: block;
+      width: 100%;
+      height: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <a href="login.html">Login</a>
+    <a href="signup.html">Sign Up</a>
+    <a href="../MastodonEvents/dashboard.html">Dashboard</a>
+    <a href="../MastodonEvents/DiscoverClubs.html">Clubs</a>
+    <a href="../MastodonEvents/Events.html">Events</a>
+    <h1>MastodonClub</h1>
+  </header>
+
+<div id="filter-container">
+  <button onclick="showFilterPopup()">Filter</button>
+  <div id="filter-popup" class="filter-popup">
+    <label class="filter-checkbox"><input type="checkbox" name="category" value="Science"> Science</label>
+    <label class="filter-checkbox"><input type="checkbox" name="category" value="Art"> Art</label>
+    <label class="filter-checkbox"><input type="checkbox" name="category" value="Sports"> Sports</label>
+    <label class="filter-checkbox"><input type="checkbox" name="category" value="Language"> Language</label>
+    <label class="filter-checkbox"><input type="checkbox" name="category" value="Student Community"> Student Community</label>
+    <label class="filter-checkbox"><input type="checkbox" name="category" value="Music"> Music</label>
+   
+    <!-- Add more categories as needed -->
+    <button onclick="filterClubs()">Apply</button>
+    <button onclick="hideFilterPopup()">Close</button>
+  </div>
+</div>
+
+<div class="club-container" data-categories="Sports" onclick="navigateToClubDetails('club1')">
+  <h2>Basketball Club</h2>
+  <p>Location: Walb</p>
+  <img src="https://horizoneroundtable.com/wp-content/uploads/2022/09/image_2022-10-02_180312764.png" alt="Club 1 Image">
+</div>
+
+<div class="club-container" data-categories="Art" onclick="navigateToClubDetails('club2')">
+  <h2>Ceramics Club</h2>
+  <p>Location: Visual Arts Building</p>
+  <img src="https://www.pfw.edu/sites/default/files/styles/50_50_landscape/public/images-2023/06/20191118-Ceramics-Club-JW-002.JPG?h=7797f1ff&itok=kHXD52Dn" alt="Club 2 Image">
+</div>
+
+<div class="club-container" data-categories="Music" onclick="navigateToClubDetails('club3')">
+  <h2>Music Therapy Club</h2>
+  <p>Location: Music Building</p>
+  <img src="https://www.pfw.edu/sites/default/files/styles/50_50_landscape/public/images-2022/01/20211026-Music-Therapy-Shoot-JW-124.jpg?itok=ndnx4lOI" alt="Club 3 Image">
+</div>
+
+<div class="club-container" data-categories="Language" onclick="navigateToClubDetails('club4')">
+<h2>French Club</h2>
+<p>Location: Walb</p>
+<img src="https://www.pfw.edu/sites/default/files/styles/50_50_landscape/public/images-2023/05/20200902-Lifestyle-Outdoor-JW-022.jpg?h=18e2b450&itok=iu0SFpNb" alt="Club 4 Image">
+</div>
+
+<div class="club-container" data-categories="Language" onclick="navigateToClubDetails('club5')">
+    <h2>Japanese Club</h2>
+    <p>Location: Walb</p>
+    <img src=" https://www.pfw.edu/dotAsset/b609452d-6c7f-49d4-a4d9-b8b6cea6b3e7.jpg" alt="Club 5 Image">
+</div>
+
+<div class="club-container" data-categories="Music" onclick="navigateToClubDetails('club6')">
+    <h2>Music Industry Association Club</h2>
+    <p>Location: Music Building</p>
+    <img src="https://www.pfw.edu/sites/default/files/styles/50_50_landscape/public/images-2022/03/research-music-students.png?h=18786c86&itok=y3gOXNLH" alt="Club 6 Image">
+</div>
+
+<div class="club-container" data-categories="Music" onclick="navigateToClubDetails('club7')">
+    <h2>NationalAssociation For Music Education Club</h2>
+    <p>Location: Music Building</p>
+    <img src="https://www.pfw.edu/sites/default/files/styles/50_50_landscape/public/images/20210610-Music-sheetb-JW-001%20copy.jpg?h=0e288399&itok=yal2mYxd " alt="Club 7 Image">
+</div>
+
+<!-- Add more club containers with data-categories attribute -->
+
+<script>
+  function showFilterPopup() {
+    var filterPopup = document.getElementById("filter-popup");
+    filterPopup.style.display = "block";
+  }
+
+  function hideFilterPopup() {
+    var filterPopup = document.getElementById("filter-popup");
+    filterPopup.style.display = "none";
+  }
+
+  
+  function navigateToClubDetails(clubId) {
+  if (clubId === 'club1') {
+    window.location.href = "Basketball_Club.html";
+  } else if (clubId === 'club2') {
+    window.location.href = "Ceramics_Club.html";
+  } else if (clubId === 'club3') {
+    window.location.href = "Music_Therapy_Club.html";
+  } else {
+    // Default case, handle appropriately (e.g., show an error message)
+    console.error("Invalid clubId:", clubId);
+  }
+}
+
+
+  function filterClubs() {
+    hideFilterPopup(); // Close the popup after applying filters
+    var selectedCategories = document.querySelectorAll('input[name="category"]:checked');
+    
+    // Iterate through club containers and show/hide based on selected categories
+    var clubContainers = document.querySelectorAll('.club-container');
+    clubContainers.forEach(function(container) {
+      var categories = container.getAttribute('data-categories').split(' ');
+      var showClub = Array.from(selectedCategories).every(function(category) {
+        return categories.includes(category.value);
+      });
+
+      container.style.display = showClub ? 'block' : 'none';
+    });
+  }
+</script>
+<footer>
+  <div class="left-column">
+    <a style="font-size: 15px;"><strong>MastodonEvents</strong></a>
+    <br>
+    <a style="font-size: 10px;">Your go-to event platform.</a>
+  </div>
+  <div class="right-column">
+    <a href="../MastodonEvents/helpCenter.html" target="_blank" style="font-size: 10px;">Help Center</a>
+    <a href="../MastodonEvents/faq.html" target="_blank" style="font-size: 10px;">FAQs</a>
+    <a href="../MastodonEvents/supportTeam.html" target="_blank" style="font-size: 10px;">Support Team</a>
+    <a href="../MastodonEvents/userManual.html" target="_blank" style="font-size: 10px;">User Manual</a>
+    <a href="../MastodonEvents/contactSupport.html" target="_blank" style="font-size: 10px;">Contact Support</a>
+</div>
+</footer>
+
+</body>
+</html>

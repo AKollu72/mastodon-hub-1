@@ -1,0 +1,486 @@
+.events_body {
+  background-color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  color: white;
+}
+
+.title {
+  align-items: center;
+  padding-top: 60px;
+}
+
+#mastodon-header {
+  background-color: rgb(207, 185, 145);
+  color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  margin: 0;
+}
+
+.main-nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.main-nav ul li {
+  display: inline;
+  margin-right: 10px;
+}
+
+.main-nav ul li a {
+  color: black;
+  text-decoration: none;
+}
+
+.login-signup {
+  margin-left: auto; /* Pushes login/signup to the right */
+}
+
+.login-signup a {
+  background-color: black;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  padding: 10px 20px; /* Added padding for better button size */
+  margin-left: 10px;
+  transition: background-color 0.3s ease; /* Smooth transition on hover */
+}
+
+.login-signup a:hover {
+  background-color: black; /* Darker shade on hover */
+  color: white;
+}
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(0, 0, 0, 0.4); /* Black with opacity */
+  color: white;
+}
+
+.modal-content {
+  background-color: black;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 50%; /* Could be more or less, depending on screen size */
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.date-inputs, .event-category-inputs {
+  display: flex;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.input-container {
+  width: 48%;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 98%;
+  background-color: rgb(207, 185, 145);
+  padding: 20px;
+  color: black;
+  font-size: small;
+}
+
+.left-column {
+  float: left;
+}
+
+.right-column {
+  float: right;
+}
+
+.left-column, .right-column {
+  flex: 1;
+  text-align: left;
+}
+
+.right-column a:focus {
+  outline: none;
+}
+
+.right-column a:hover {
+  color: white;
+}
+
+footer a {
+  color: black;
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  height: 20px;
+}
+
+a:visited {
+  color: rgb(237, 225, 225);
+}
+
+.right-column a:focus {
+  outline: none;
+}
+
+.right-column a:hover {
+  color: white;
+}
+
+.help-center-body {
+  background-color: black;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1; /* Allow main to grow to fill remaining space */
+  overflow-y: auto; /* Enable vertical scrolling if content overflows */
+  padding: 20px; /* Add padding to main content */
+}
+
+.pagebox {
+  background-color: black;
+  vertical-align: top;
+  display: inline-block;
+  width: 30%; /* Adjust the width as needed */
+  height: 20%;
+  padding: 20px;
+  border: 2px solid rgb(207, 185, 145);
+  margin: 40px;
+  border-radius: 16px;
+  margin-bottom: 20px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.pagebox section {
+  text-align: center;
+}
+
+.pagebox img {
+  display: block;
+  margin: 0 auto;
+}
+
+#loginButton, #event-category-button {
+  background-color: black;
+  margin-left: 450px;
+  margin-right: 10px;
+  padding: 2px 3px;
+  display: inline-block;
+  color: white;
+  align-items: center;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+#loginButton:hover, #event-category-button:hover, .register-button:hover {
+  background-color: rgb(207, 185, 145);
+  color: strong white;
+  transform: translateY(-15px);
+  transition: transform 0.5s;
+}
+
+#register-button {
+  display: inline-block;
+  background-color: rgb(74, 71, 71);
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+a:visited {
+  color: rgb(237, 225, 225);
+}
+
+a:hover {
+  color: rgb(237, 225, 225);
+}
+
+#Search {
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  width: 300px;
+  height: 40px;
+  position: absolute;
+  top: 70%;
+  left: 40%;
+  align-items: center;
+  overflow: hidden;
+}
+
+#banner {
+  background-color: white;
+  height: 300px;
+  float: center;
+  margin-left: 10px;
+  margin-right: 10px;
+  position: relative; /* Add relative positioning */
+  margin-bottom: 40px;
+  padding-bottom: 50px;
+}
+
+#banner img {
+  width: 100%;
+  height: 400px;
+}
+
+.Events-Banner {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: black;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  background-color: white(0, 0, 0, 0.5);
+  padding: 10px;
+}
+
+.music, .workshops, .art, .sports {
+  top: 50%;
+  left: 50%;
+  color: black;
+  font-weight: bold;
+  text-align: center;
+  background-color: white(0, 0, 0, 0.5);
+  padding: 10px;
+}
+
+.column1, .column2, .column3, .column4 {
+  background-color: #efefef;
+  width: 250px;
+  height: 250px;
+  float: left;
+  margin: 15px;
+  border: solid white;
+}
+
+.column1:hover, .column2:hover, .column3:hover, .column4:hover {
+  background-color: rgb(207, 185, 145);
+  border: rgb(207, 185, 145);
+}
+
+.column1 img, .column2 img, .column3 img, .column4 img {
+  width: 250px;
+  height: 200px;
+  border: white;
+}
+
+h3, h6, h1 {
+  color: white;
+  margin-top: 10px;
+  padding-top: 10px;
+}
+
+.event {
+  margin-bottom: 20px;
+}
+
+.event-date {
+  font-weight: bold;
+}
+
+.event-category {
+  color: white;
+}
+
+#event-category {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: 1px solid #ccc; /* Add border */
+  padding: 8px; /* Add padding */
+  width: 150px; /* Set width */
+  font-size: 16px; /* Set font size */
+  background-color: white; /* Set background color */
+  cursor: pointer; /* Change cursor on hover */
+  border-radius: 5px; /* Add border radius */
+  text-align: left;
+}
+
+#eventsList {
+  display: none; /* Hide events list by default */
+  color: white;
+}
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(0, 0, 0, 0.4); /* Black with opacity */
+  color: white;
+}
+
+.modal-content {
+  background-color: black;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 50%; /* Could be more or less, depending on screen size */
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.date-inputs, .event-category-inputs {
+  display: flex;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.input-container {
+  width: 48%; /* Adjust as needed */
+}
+
+#event-category {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border: 1px solid #ccc; /* Add border */
+  padding: 8px; /* Add padding */
+  width: 150px; /* Set width */
+  font-size: 16px; /* Set font size */
+  background-color: white; /* Set background color */
+  cursor: pointer; /* Change cursor on hover */
+  border-radius: 5px; /* Add border radius */
+  text-align: left;
+}
+
+#event-item {
+  display: none;
+}
+
+#featuredEvents, #yourEvents {
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+
+.eventList {
+  width: 80%;
+  border-collapse: collapse;
+  margin: 0 auto;
+  border-radius: 16px;
+}
+
+.eventList_tr {
+  margin-bottom: 50px; /* Adjust the margin between table rows as needed */
+  border-radius: 16px;
+}
+
+.eventList_td {
+  padding-bottom: 50px;
+  padding-right: 8px;
+  text-align: left;
+  vertical-align: top;
+  border: 4px solid rgb(207, 185, 145);
+  margin-bottom: 20px;
+  margin: 0 auto;
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+th {
+  background-color: rgb(207, 185, 145);
+  color: white !important;
+}
+
+.register-button {
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 8px;
+  background-color: rgb(207, 185, 145);
+  color: white !important; /* Set font color to white for register button */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  justify-content: space-evenly;
+}
+
+.register-button:hover {
+  background-color: rgb(207, 185, 145);
+  color: white;
+}
+
+.register-button a {
+  color: white;
+  text-decoration: none;
+}/*# sourceMappingURL=styles.css.map */

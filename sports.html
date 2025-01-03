@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="styles.css"/>
+    <title>Sports</title>
+</head>
+<body class="events_body">
+    <header id="mastodon-header">
+        <nav class="main-nav">
+            <ul>
+                
+                <li style="font-size: larger;">MastodonHub</li>
+                <li><a href="../MastodonEvents/dashboard.html">Dashboard</a></li>
+                <li><a href="../MastodonEvents/Events.html">Events</a></li>
+                <li><a href="../MastodonEvents/DiscoverClubs.html">Clubs</a></li>
+                <!-- Add more navigation links as needed -->
+            </ul>
+        </nav>
+        
+        <div class="login-signup">
+            <a href="login.html" class="button">Login</a>
+            <a href="signup.html" class="button">Sign Up</a>
+        </div>    
+    </header>
+    <div class="title">
+        <h1>Sports</h1>
+    </div>
+    <section id="EventsList">
+        <table class="eventList">
+            <tr class="eventList_tr">
+                <td class="eventList_td">
+                    <div><img src="../MastodonEvents/images/sports.png" alt="Sports" width="250px" height="200px"/></div>
+                    <span class="event-date">March 15, 2024</span><br>
+                    <span class="event-category">Exhibition</span><br>
+                    <strong>Soccer Match</strong><br>
+                    <p>Description: Watch an exciting soccer match between two top teams.</p>
+                    <p>Time: 10:00 AM - 5:00 PM</p>
+                    <p>Location: Stadium XYZ</p>
+                    <button id="register-button"><a href="#">Register</a></button>
+                </td>
+                <td class="eventList_td">
+                    <div><img src="../MastodonEvents/images/sports1.png" alt="workshops" width="250px" height="200px"/></div>
+                    <span class="event-date">March 20, 2024</span><br>
+                    <span class="event-category">Workshop</span><br>
+                    <strong>Basketball Training Camp</strong><br>
+                    <p>Description: Join our basketball training camp to improve your skills.</p>
+                    <p>Time: 2:00 PM - 4:00 PM</p>
+                    <p>Location: Community Center ABC</p>
+                    <button id="register-button"><a href="#" target="_blank">Register</a></button>
+                </td>
+            </tr>
+            <!-- Add more events as needed -->
+        </table>
+    </section>
+</body>
+<footer>
+    <div class="left-column">
+        <a style="font-size: 15px;"><strong>MastodonHub</strong></a>
+        <br>
+        <a style="font-size: 10px;">Your go-to event platform.</a>
+    </div>
+    <div class="right-column">
+        <a href="../MastodonEvents/helpCenter.html" target="_blank" style="font-size: 10px;">Help Center</a>
+        <a href="../MastodonEvents/faq.html" target="_blank" style="font-size: 10px;">FAQs</a>
+        <a href="../MastodonEvents/supportTeam.html" target="_blank" style="font-size: 10px;">Support Team</a>
+        <a href="../MastodonEvents/userManual.html" target="_blank" style="font-size: 10px;">User Manual</a>
+        <a href="../MastodonEvents/contactSupport.html" target="_blank" style="font-size: 10px;">Contact Support</a>
+    </div>
+</footer>
+<script>
+    // Function to register an event
+    function registerEvent(eventId) {
+        // Here you would retrieve event details based on eventId
+        // For demonstration, let's assume event details are hard-coded
+        const eventData = {
+            name: "Sample Event",
+            category: "Sample Category",
+            date: "2024-03-15",
+            attendees: 30,
+            tickets: 50,
+            ticketType: "General"
+        };
+
+        // Add the registered event to "Your events" section
+        addEventToYourEvents(eventData);
+    }
+
+    // Function to add an event to "Your events" section
+    function addEventToYourEvents(eventData) {
+        const yourEventsTable = document.getElementById("yourEventsTable");
+        const newRow = yourEventsTable.insertRow();
+        newRow.innerHTML = `
+            <td>${eventData.name}</td>
+            <td>${eventData.category}</td>
+            <td>${eventData.date}</td>
+            <td>${eventData.attendees}</td>
+            <td>${eventData.tickets}</td>
+            <td>${eventData.ticketType}</td>
+        `;
+    }
+</script>
+</html>

@@ -1,0 +1,159 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width", initial-scale="1.0"/>
+    <link rel="stylesheet" href="styles.css"/>
+    <title>Events</title>
+</head>
+<body class="events_body">
+    <header id="mastodon-header">
+        <nav class="main-nav">
+            <ul>
+                
+                <li style="font-size: larger;">MastodonHub</li>
+                <li><a href="../MastodonEvents/dashboard.html">Dashboard</a></li>
+                <li><a href="../MastodonEvents/Events.html">Events</a></li>
+                <li><a href="../MastodonEvents/DiscoverClubs.html">Clubs</a></li>
+            </ul>
+        </nav>
+        
+        <div class="login-signup">
+            <a href="login.html" class="button">Login</a>
+            <a href="signup.html" class="button">Sign Up</a>
+        </div>    
+    </header>
+    <section>
+        <div id="banner">
+            <img src="../MastodonEvents/images/Image.png" alt="Events-Banner"/>
+            <div class="Events-Banner">Discover exciting events with MastodonHub</div>
+        </div>
+            <div id="Search">
+                <form id="searchForm" method="get">
+                    <input id="categoryInput" name="Category" style="width: 300px" type="text" placeholder="Enter category">
+                    <br>
+                    <input type="submit" value="Search Events">
+                </form>
+            </div>
+    <div class="title">
+        <h3>Featured Events</h3>
+    </div>
+    </section>
+    <section id="featuredEvents">
+        <article class="feature column1">
+            <a href="../MastodonEvents/music.html" style=" text-decoration: none;">
+                <img src="../MastodonEvents/images/music.png" alt="music"/>
+                <div class="music" style=" text-decoration: none;">Summer Music Festival</div>
+            </a>               
+        </article>
+        <article class="feature column2" >
+            <a href="../MastodonEvents/workshops.html" style=" text-decoration: none;">
+                <img src="../MastodonEvents/images/workshops.jpg" alt="workshops"/>
+                <div class="workshops">Writing Workshops</div>
+            </a>
+        </article>
+        <article class="feature column3">
+            <a href="../MastodonEvents/art.html" style=" text-decoration: none;">
+                <img src="../MastodonEvents/images/art.png" alt="art"/>
+                <div class="art">Art Gallery Opening</div>
+            </a>
+        </article>
+        <article class="feature column4">
+            <a href="../MastodonEvents/sports.html" style=" text-decoration: none;">
+                <img src="../MastodonEvents/images/sports1.png" alt="sports"/>
+                <div class="sports">Soccer Match</div>
+            </a>
+        </article>
+    </section>
+    <div class="title">
+        <h3>Your Events</h3>
+    </div>
+    <section id="yourEvents">
+        <article class="feature column4">
+            <a href="../MastodonEvents/sports.html" style=" text-decoration: none;">
+                <img src="../MastodonEvents/images/sports.png" alt="sports"/>
+                <div class="sports">Basketball Training Camp</div>
+            </a>
+        </article>
+        <article class="feature column2" >
+            <a href="../MastodonEvents/coming-soon.html" style=" text-decoration: none;">
+                <img src="../MastodonEvents/images/workshops.jpg" alt="workshops"/>
+                <div class="workshops">Oil Painting Workshop</div>
+            </a>
+        </article>
+    </section>
+    <div id="filterModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Filter Events</h2>
+            <div class="date-inputs">
+                <div class="input-container">
+                    <h3 style="text-align: left;">Event Date</h3>
+                    <input type="date" id="eventDateInput" placeholder="MM/DD/YYYY">
+                </div>
+            </div> 
+            <div class="event-category-inputs">
+                <div class="input-container">
+                    <h3 style="text-align: left;">Event Category</h3>
+                    <select id="event-category">
+                        <option value="all">All</option>
+                        <option value="music">Music</option>
+                        <option value="art">Art</option>
+                        <option value="workshops">Workshops</option>
+                    </select>
+                </div>
+            </div>    
+            <button id="clearFilterBtn">Clear</button> 
+            <button id="applyFilterBtn">Apply Filter</button> 
+        </div>
+    </div>
+    <footer>
+        <div class="left-column">
+            <a style="font-size: 15px;"><strong>MastodonHub</strong></a>
+            <br>
+            <a style="font-size: 10px;">Your go-to event platform.</a>
+        </div>
+        <div class="right-column">
+            <a href="../MastodonEvents/helpCenter.html" target="_blank" style="font-size: 10px;">Help Center</a>
+            <a href="../MastodonEvents/faq.html" target="_blank" style="font-size: 10px;">FAQs</a>
+            <a href="../MastodonEvents/supportTeam.html" target="_blank" style="font-size: 10px;">Support Team</a>
+            <a href="../MastodonEvents/userManual.html" target="_blank" style="font-size: 10px;">User Manual</a>
+            <a href="../MastodonEvents/contactSupport.html" target="_blank" style="font-size: 10px;">Contact Support</a>
+        </div>
+    </footer>
+</body>
+<script>
+    // Search
+    document.getElementById('searchForm').addEventListener('submit', function(e) {
+        // Prevent the default form submission
+        e.preventDefault();
+
+        // Get the category entered by the user
+        var category = document.getElementById('categoryInput').value.toLowerCase().trim();
+
+        // Set the action attribute based on the category
+        switch (category) {
+            case 'art':
+            case 'arts':
+                window.location.href = "../MastodonEvents/art.html";
+                break;
+            case 'music':
+                window.location.href = "../MastodonEvents/music.html";
+                break;
+            case 'workshop':
+            case 'workshops':
+                window.location.href = "../MastodonEvents/workshops.html";
+                break;
+            case 'sport':
+            case 'sports':
+                window.location.href = "../MastodonEvents/sports.html";
+                break;
+            default:
+                alert("Invalid category. Please enter a valid category.");
+                return; // Stop further execution if category is invalid
+        }
+    });
+</script>
+
+</html>
