@@ -27,12 +27,4 @@ Microsoft Teams
   - Application name change from MastodonEvent to MastodonHub. Reflected in the application pages but a new repository needs to be created to reflect the same.
 - Planned
   - React, Back-end and Testing for all the pages.
-  
-### Team Members:  
-Roshini Seelamsetty - Clubs Pages
 
-Amrutha Kollu - Footer Pages
-
-Nida Tazeen - Events Pages
-
-Likhita Kadiyala - Dashboard, SignUp, Login
